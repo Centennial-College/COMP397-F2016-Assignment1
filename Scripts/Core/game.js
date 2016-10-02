@@ -2,7 +2,7 @@
  * @file game.ts
  * @author Kevin Ma kma45@my.centennialcollege.ca
  * @studentID 300867968
- * @date: September 20, 2016
+ * @date: October 2, 2016
  * @description: This file is the entry point for the game.
  * @version 0.1.0
  */
@@ -12,12 +12,9 @@
 var assets;
 var canvas;
 var stage;
+// Game Scene Variables
 var currentScene;
 var scene;
-// Game scenes
-var menuScene;
-var gameScene;
-var gameOverScene;
 // Preload Assets required
 var assetData = [
     { id: "Start", src: "../../Assets/images/Start.png" },
@@ -86,8 +83,7 @@ function changeScene() {
     switch (scene) {
         case config.Scene.MENU:
             stage.removeAllChildren();
-            menuScene = new scenes.Menu();
-            currentScene = menuScene;
+            currentScene = new scenes.Menu();
             console.log("Starting MENU scene");
             break;
         case config.Scene.GAME:
