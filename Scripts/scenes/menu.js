@@ -39,11 +39,7 @@ var scenes;
             this._menuAuthorLabel = new objects.Label("Developed by: Kevin Ma", "20px Verdana", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y + 120);
             this.addChild(this._menuAuthorLabel);
             // use drawRect to draw a horizontal line divider between the title and the author credits
-            var rect = new createjs.Shape();
-            rect.graphics.beginStroke('#000');
-            rect.graphics.drawRect(0, 0, config.Screen.WIDTH - 40, 1);
-            rect.y = config.Screen.CENTER_Y + 90;
-            rect.x = 20;
+            var rect = new objects.HorizontalLine(20, config.Screen.CENTER_Y + 90);
             stage.addChild(rect);
             // Add button to scene. Register for click callback function
             this._menuButton = new objects.Button("Start", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);
