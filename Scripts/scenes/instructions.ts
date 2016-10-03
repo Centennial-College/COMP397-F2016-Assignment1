@@ -41,7 +41,7 @@ module scenes {
             this.addChild(this._instructionsTitleLabel);
 
             // add instructions text to instructions scene
-            this._instructionsLabel = new objects.Label("Including you, there are two people on the stranded island.\nYou are given 10 hours to head to the center\nof the island. At the center you will enter a portal and\nbe able to safely escape. Only one person is\npermitted to use the portal to escape. After 10 hours\nhave passed, nuclear missles will be launched\ntargetting the island and anyone remaining on the\nisland will be killed. Good luck escaping the island!", "2vmin Verdana", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y);
+            this._instructionsLabel = new objects.Label("Including you, there are two people on the stranded island.\nYou are given 10 hours to head to the center\nof the island. At the center you will enter a portal and\nbe able to safely escape. Only one person is\npermitted to use the portal to escape. After 10 hours\nhave passed, nuclear missles will be launched\ntargetting the island and anyone remaining on the\nisland will be killed.\n\nGood luck escaping the island!", "2vmin Verdana", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y);
             this.addChild(this._instructionsLabel);
 
             // Add button(s) to scene. Register for click callback function

@@ -2,7 +2,6 @@
     "compilerOptions": {
         "target": "es5",
         "module": "commonjs",
-        "outFile": "Scripts/release/game.js",
         "sourceMap": true
     },
     "exclude": [

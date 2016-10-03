@@ -4,7 +4,7 @@
  * @studentID 300867968
  * @date: October 2, 2016
  * @description: This file is the entry point for the game.
- * @version 0.1.0
+ * @version 0.2.2
  */
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /// <reference path = "_reference.ts" />
@@ -19,6 +19,7 @@ var scene;
 var assetData = [
     { id: "Start", src: "../../Assets/images/Start.png" },
     { id: "Back", src: "../../Assets/images/Back.png" },
+    { id: "Next", src: "../../Assets/images/Next.png" },
     { id: "BG", src: "../../Assets/images/bg.png" },
     { id: "GameOver", src: "../../Assets/images/gameover.png" },
     { id: "Mario", src: "../../Assets/images/mario.png" }
