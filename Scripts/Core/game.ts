@@ -4,7 +4,7 @@
  * @studentID 300867968
  * @date: October 2, 2016
  * @description: This file is the entry point for the game.
- * @version 0.1.0
+ * @version 0.2.2
  */
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -24,6 +24,7 @@ let scene: number;
 let assetData: objects.Asset[] = [
     { id: "Start", src: "../../Assets/images/Start.png" },
     { id: "Back", src: "../../Assets/images/Back.png" },
+    { id: "Next", src: "../../Assets/images/Next.png" },
     { id: "BG", src: "../../Assets/images/bg.png" },
     { id: "GameOver", src: "../../Assets/images/gameover.png" },
     { id: "Mario", src: "../../Assets/images/mario.png" }
@@ -100,6 +101,11 @@ function changeScene(): void {
             stage.removeAllChildren();
             currentScene = new scenes.Menu();
             console.log("Starting MENU scene");
+            break;
+        case config.Scene.INSTRUCTIONS:
+            stage.removeAllChildren();
+            currentScene = new scenes.Instructions();
+            console.log("Starting INSTRUCTIONS scene");
             break;
         case config.Scene.GAME1:
             stage.removeAllChildren();

@@ -2,9 +2,9 @@
  * @file config.ts
  * @author Kevin Ma kma45@my.centennialcollege.ca
  * @studentID 300867968
- * @date: September 20, 2016
+ * @date: October 2, 2016
  * @description: This file is used to store globally accessible values and states for the game.
- * @version 0.1.0
+ * @version 0.2.0 - finished menu scene
  */
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 var config;
@@ -13,8 +13,19 @@ var config;
         function Scene() {
         }
         Scene.MENU = 0;
-        Scene.GAME = 1;
-        Scene.GAMEOVER = 2;
+        Scene.INSTRUCTIONS = 1;
+        Scene.GAME1 = 2;
+        Scene.GAME2_1 = 3;
+        Scene.GAME2_2 = 4;
+        Scene.GAME3_1 = 5;
+        Scene.GAME3_2 = 6;
+        Scene.GAME3_3 = 7;
+        Scene.GAME3_4 = 8;
+        Scene.ENDING1 = 9;
+        Scene.ENDING2 = 10;
+        Scene.ENDING3 = 11;
+        Scene.ENDING4 = 12;
+        Scene.GAMEOVER = 13;
         return Scene;
     }());
     config.Scene = Scene;

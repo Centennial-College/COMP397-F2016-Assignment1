@@ -86,7 +86,12 @@ function changeScene() {
             currentScene = new scenes.Menu();
             console.log("Starting MENU scene");
             break;
-        case config.Scene.GAME:
+        case config.Scene.INSTRUCTIONS:
+            stage.removeAllChildren();
+            currentScene = new scenes.Instructions();
+            console.log("Starting INSTRUCTIONS scene");
+            break;
+        case config.Scene.GAME1:
             stage.removeAllChildren();
             currentScene = new scenes.Game();
             console.log("Starting GAME scene");

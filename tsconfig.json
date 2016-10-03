@@ -1,10 +1,11 @@
 {
     "compilerOptions": {
         "target": "es5",
-        "module": "commonjs", 
-        "sourceMap": true,
-        "outFile": "Scripts/release/game.js"
-    }, "exclude": [
+        "module": "commonjs",
+        "outFile": "Scripts/release/game.js",
+        "sourceMap": true
+    },
+    "exclude": [
         "Scripts/lib",
         "node_modules"
     ]

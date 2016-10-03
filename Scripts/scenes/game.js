@@ -4,7 +4,7 @@
  * @studentID 300867968
  * @date: September 23, 2016
  * @description: Game scene that contains all assets and functionality associated with the game itself
- * @version 0.1.0
+ * @version 0.2.0 - finished menu scene
  */
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];

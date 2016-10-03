@@ -2,9 +2,9 @@
  * @file menu.ts
  * @author Kevin Ma kma45@my.centennialcollege.ca
  * @studentID 300867968
- * @date: September 20, 2016
+ * @date: October 2, 2016
  * @description: This file contains all assets and functionality associated with the menu itself.
- * @version 0.1.0
+ * @version 0.2.0 - finished menu scene
  */
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -32,15 +32,23 @@ var scenes;
           */
         Menu.prototype.start = function () {
             console.log("Menu Scene Started");
-            this._menuLabel = new objects.Label("Welcome to Menu Scene", "40px Arial", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y);
-            this.addChild(this._menuLabel);
+            // add title to menu scene
+            this._menuTitleLabel = new objects.Label("Game of\nSurvival", "123px Times New Roman", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y - 70);
+            this.addChild(this._menuTitleLabel);
+            // add author credits to menu scene
+            this._menuAuthorLabel = new objects.Label("Developed by: Kevin Ma", "20px Verdana", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y + 120);
+            this.addChild(this._menuAuthorLabel);
+            // use drawRect to draw a horizontal line divider between the title and the author credits
+            var rect = new createjs.Shape();
+            rect.graphics.beginStroke('#000');
+            rect.graphics.drawRect(0, 0, config.Screen.WIDTH - 40, 1);
+            rect.y = config.Screen.CENTER_Y + 90;
+            rect.x = 20;
+            stage.addChild(rect);
             // Add button to scene. Register for click callback function
             this._menuButton = new objects.Button("Start", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);
             this.addChild(this._menuButton);
             this._menuButton.on("click", this._startButtonClick, this);
-            this._menuButtonGameOver = new objects.Button("GameOver", config.Screen.CENTER_X, config.Screen.CENTER_Y - 180);
-            this.addChild(this._menuButtonGameOver);
-            this._menuButtonGameOver.on("click", this._gameOverButtonClick, this);
             // Add menu scene to global stage container
             stage.addChild(this);
         };
@@ -67,22 +75,8 @@ var scenes;
          * @return {void}
          */
         Menu.prototype._startButtonClick = function (event) {
-            // Change global scene variable to GAME. Call global changeScene() function
-            scene = config.Scene.GAME;
-            changeScene();
-        };
-        /**
-         * This method changes the current scene to the gameover scene when the gameover button is clicked
-         *
-         * @private
-         * @method _gameOverButtonClick
-         * @param {createjs.MouseEvent} event
-         *
-         * @memberOf Menu
-         * @return {void}
-         */
-        Menu.prototype._gameOverButtonClick = function (event) {
-            scene = config.Scene.GAMEOVER;
+            // Change global scene variable to INSTRUCTIONS. Call global changeScene() function
+            scene = config.Scene.INSTRUCTIONS;
             changeScene();
         };
         return Menu;
