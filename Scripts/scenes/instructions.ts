@@ -4,7 +4,7 @@
  * @studentID 300867968
  * @date: October 2, 2016
  * @description: This file contains all assets and functionality associated with the instructions menu.
- * @version 0.3.0 - finished instructions scene 
+ * @version 0.3.3 - implemented use of HorizontalLine object in scenes
  */
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -17,6 +17,7 @@ module scenes {
         private _backButton: objects.Button;
         private _instructionsTitleLabel: objects.Label;
         private _instructionsLabel: objects.Label;
+        private _hr: objects.HorizontalLine;
 
         // CONSTRUCTOR +++++++++++++++++++++++++++++++++++++++++++++++++++++++
         constructor() {
@@ -43,6 +44,10 @@ module scenes {
             // add instructions text to instructions scene
             this._instructionsLabel = new objects.Label("Including you, there are two people on the stranded island.\nYou are given 10 hours to head to the center\nof the island. At the center you will enter a portal and\nbe able to safely escape. Only one person is\npermitted to use the portal to escape. After 10 hours\nhave passed, nuclear missles will be launched\ntargetting the island and anyone remaining on the\nisland will be killed.\n\nGood luck escaping the island!", "2vmin Verdana", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y);
             this.addChild(this._instructionsLabel);
+
+            // use drawRect to draw a horizontal line divider between the title and the author credits
+            this._hr = new objects.HorizontalLine(20, config.Screen.CENTER_Y + 125);
+            stage.addChild(this._hr)
 
             // Add button(s) to scene. Register for click callback function
             this._backButton = new objects.Button("Back", config.Screen.CENTER_X - 200, config.Screen.CENTER_Y + 180);

@@ -4,7 +4,7 @@
  * @studentID 300867968
  * @date: October 2, 2016
  * @description: This file contains all assets and functionality associated with the menu itself.
- * @version 0.2.0 - finished menu scene
+ * @version 0.3.2
  */
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -16,6 +16,7 @@ module scenes {
         private _menuButton: objects.Button;
         private _menuTitleLabel: objects.Label;
         private _menuAuthorLabel: objects.Label;
+        private _hr: objects.HorizontalLine;
 
         // CONSTRUCTOR +++++++++++++++++++++++++++++++++++++++++++++++++++++++
         constructor() {
@@ -44,8 +45,8 @@ module scenes {
             this.addChild(this._menuAuthorLabel);
 
             // use drawRect to draw a horizontal line divider between the title and the author credits
-            let rect = new objects.HorizontalLine(20, config.Screen.CENTER_Y + 90);
-            stage.addChild(rect)
+            this._hr = new objects.HorizontalLine(20, config.Screen.CENTER_Y + 90);
+            stage.addChild(this._hr)
 
             // Add button to scene. Register for click callback function
             this._menuButton = new objects.Button("Start", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);

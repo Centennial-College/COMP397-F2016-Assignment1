@@ -4,7 +4,7 @@
  * @studentID 300867968
  * @date: October 2, 2016
  * @description: This file contains all assets and functionality associated with the menu itself.
- * @version 0.2.0 - finished menu scene
+ * @version 0.3.2
  */
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -39,8 +39,8 @@ var scenes;
             this._menuAuthorLabel = new objects.Label("Developed by: Kevin Ma", "20px Verdana", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y + 120);
             this.addChild(this._menuAuthorLabel);
             // use drawRect to draw a horizontal line divider between the title and the author credits
-            var rect = new objects.HorizontalLine(20, config.Screen.CENTER_Y + 90);
-            stage.addChild(rect);
+            this._hr = new objects.HorizontalLine(20, config.Screen.CENTER_Y + 90);
+            stage.addChild(this._hr);
             // Add button to scene. Register for click callback function
             this._menuButton = new objects.Button("Start", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);
             this.addChild(this._menuButton);
