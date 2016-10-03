@@ -25,7 +25,6 @@ module objects {
             this.graphics.drawRect(0, 0, lineWidth, 1)
             this.y = y;
             this.x = x;
-            stage.addChild(this);
         }
     }
 }

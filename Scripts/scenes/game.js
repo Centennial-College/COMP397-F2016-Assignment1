@@ -2,9 +2,9 @@
  * @file game.ts
  * @author Kevin Ma kma45@my.centennialcollege.ca
  * @studentID 300867968
- * @date: September 23, 2016
- * @description: Game scene that contains all assets and functionality associated with the game itself
- * @version 0.2.0 - finished menu scene
+ * @date: October 2, 2016
+ * @description: Abstraction of game scene wherein specific game scenes will follow template laid out by this class
+ * @version 0.4.0 - finished template for the game scenes
  */
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -17,8 +17,15 @@ var scenes;
     var Game = (function (_super) {
         __extends(Game, _super);
         // CONSTRUCTOR +++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        function Game() {
+        function Game(title, text, option1, option2) {
             _super.call(this);
+            this._gameTitleLabel = new objects.Label(title, "60px Consolas", "#00008b", config.Screen.CENTER_X - 80, config.Screen.CENTER_Y - 150);
+            this._gameTextLabel = new objects.Label(text, "30px Consolas", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y);
+            this._gamePromptLabel = new objects.Label("What do you do?", "30px Consolas", "#00008b", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 100);
+            this._hr = new objects.HorizontalLine(20, config.Screen.CENTER_Y + 125);
+            this._option1Button = new objects.Button(option1, config.Screen.CENTER_X - 200, config.Screen.CENTER_Y + 180);
+            this._option2Button = new objects.Button(option2, config.Screen.CENTER_X + 200, config.Screen.CENTER_Y + 180);
+            this.start();
         }
         // PUBLIC FUNCTIONS +++++++++++++++++++++++++++++++++++++++++++++++++
         /**
@@ -33,13 +40,15 @@ var scenes;
         Game.prototype.start = function () {
             // Add objects to the scene
             console.log("Game scene started");
-            // Create Label for scene and add to Game Scene container
-            this._gameLabel = new objects.Label("PLAY SCENE", "60px Consolar", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y);
-            this.addChild(this._gameLabel);
-            // Create button for scene and add to Game Scene container. Register for onclick event
-            this._gameButton = new objects.Button("Back", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);
-            this.addChild(this._gameButton);
-            this._gameButton.on("click", this._onBackButtonClick, this);
+            this.addChild(this._gameTitleLabel);
+            this.addChild(this._gameTextLabel);
+            this.addChild(this._gamePromptLabel);
+            this.addChild(this._hr);
+            // Create buttons for scene and add to Game Scene container. Register for onclick event
+            this.addChild(this._option1Button);
+            this.addChild(this._option2Button);
+            this._option1Button.on("click", this._option1ButtonClick, this);
+            this._option2Button.on("click", this._option2ButtonClick, this);
             // Add gamescene to main stage container. 
             stage.addChild(this);
         };
@@ -57,17 +66,29 @@ var scenes;
         };
         // PRIVATE FUNCTIONS +++++++++++++++++++++++++++++++++++++++++++++++++
         /**
-         * This function changes the game to the menu scene
+         * This function changes the game to the left scene in the state machine design pattern
          *
          * @private
-         * @method _onBackButtonClick
+         * @method _option1ButtonClick
          * @param {createjs.MouseEvent} event
          *
          * @memberOf Game
          */
-        Game.prototype._onBackButtonClick = function (event) {
-            // Set global variable to Menu Scene and call changescene function
+        Game.prototype._option1ButtonClick = function (event) {
             scene = config.Scene.MENU;
+            changeScene();
+        };
+        /**
+         * This function changes the game to the right scene in the state machine design pattern
+         *
+         * @private
+         * @method _option2ButtonClick
+         * @param {createjs.MouseEvent} event
+         *
+         * @memberOf Game
+         */
+        Game.prototype._option2ButtonClick = function (event) {
+            scene = config.Scene.INSTRUCTIONS;
             changeScene();
         };
         return Game;

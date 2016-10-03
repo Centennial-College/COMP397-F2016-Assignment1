@@ -15,7 +15,6 @@ module objects {
         // CONSTRUCTOR +++++++++++++++++++++++++++++++++++++++++++++++++++++++
         constructor() {
             super();
-            this.start();
         }
 
         // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -29,7 +28,6 @@ module objects {
          * @return {void}
          */
         public start() : void {
-            stage.addChild(this);
         }
 
         /**

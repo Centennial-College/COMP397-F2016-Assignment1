@@ -19,7 +19,6 @@ var objects;
         // CONSTRUCTOR +++++++++++++++++++++++++++++++++++++++++++++++++++++++
         function Scene() {
             _super.call(this);
-            this.start();
         }
         // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++
         /**
@@ -32,7 +31,6 @@ var objects;
          * @return {void}
          */
         Scene.prototype.start = function () {
-            stage.addChild(this);
         };
         /**
          * When this object updates, this method is run

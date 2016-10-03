@@ -19,6 +19,7 @@ var scenes;
         // CONSTRUCTOR +++++++++++++++++++++++++++++++++++++++++++++++++++++++
         function Instructions() {
             _super.call(this);
+            this.start();
         }
         // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++
         /**

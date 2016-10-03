@@ -19,6 +19,7 @@ var scenes;
         // CONSTRUCTOR +++++++++++++++++++++++++++++++++++++++++++++++++++++++
         function Menu() {
             _super.call(this);
+            this.start();
         }
         // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++
         /**

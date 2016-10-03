@@ -25,6 +25,8 @@ let assetData: objects.Asset[] = [
     { id: "Start", src: "../../Assets/images/Start.png" },
     { id: "Back", src: "../../Assets/images/Back.png" },
     { id: "Next", src: "../../Assets/images/Next.png" },
+    { id: "Stay", src: "../../Assets/images/Stay.png" },
+    { id: "GoOver", src: "../../Assets/images/GoOver.png" },
     { id: "BG", src: "../../Assets/images/bg.png" },
     { id: "GameOver", src: "../../Assets/images/gameover.png" },
     { id: "Mario", src: "../../Assets/images/mario.png" }
@@ -109,7 +111,7 @@ function changeScene(): void {
             break;
         case config.Scene.GAME1:
             stage.removeAllChildren();
-            currentScene = new scenes.Game();
+            currentScene = new scenes.Game1();
             console.log("Starting GAME scene");
             break;
         case config.Scene.GAMEOVER:
