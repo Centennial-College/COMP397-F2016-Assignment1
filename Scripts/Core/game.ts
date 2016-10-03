@@ -101,7 +101,7 @@ function changeScene(): void {
             currentScene = new scenes.Menu();
             console.log("Starting MENU scene");
             break;
-        case config.Scene.GAME:
+        case config.Scene.GAME1:
             stage.removeAllChildren();
             currentScene = new scenes.Game();
             console.log("Starting GAME scene");

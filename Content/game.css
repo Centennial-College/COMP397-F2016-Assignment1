@@ -4,13 +4,18 @@
  * @studentID 300867968
  * @date October 2, 2016
  * @description This file is the main styling sheet for the game
- * @version 0.1.0
+ * @version 0.2.0 - finished menu scene
  */
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 body {
-    background-color: darkgrey;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,207cca+51,7db9e8+100;Blue+Gloss+Default */
+    background: rgb(30,87,153); /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, rgba(30,87,153,1) 0%, rgba(41,137,216,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 canvas {
@@ -18,7 +23,7 @@ canvas {
     border-radius: 10px;
     text-align: center;
     background-color: aliceblue;
-    margin-top: 10vh;
+    margin-top: 20vh;
     /*width: 100vw;
     height: 100vh;*/
 }

@@ -2,9 +2,9 @@
  * @file config.ts
  * @author Kevin Ma kma45@my.centennialcollege.ca
  * @studentID 300867968
- * @date: September 20, 2016
+ * @date: October 2, 2016
  * @description: This file is used to store globally accessible values and states for the game.
- * @version 0.1.0
+ * @version 0.2.0 - finished menu scene
  */
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -13,18 +13,18 @@ module config {
     export class Scene {
         public static MENU: number = 0;
         public static INSTRUCTIONS: number = 1;
-        public static GAME1: number = 1;
-        public static GAME2_1: number = 1;
-        public static GAME2_2: number = 1;
-        public static GAME3_1: number = 1;
-        public static GAME3_2: number = 1;
-        public static GAME3_3: number = 1;
-        public static GAME3_4: number = 1;
-        public static ENDING1: number = 1;
-        public static ENDING2: number = 1;
-        public static ENDING3: number = 1;
-        public static ENDING4: number = 1;
-        public static GAMEOVER: number = 2;
+        public static GAME1: number = 2;
+        public static GAME2_1: number = 3;
+        public static GAME2_2: number = 4;
+        public static GAME3_1: number = 5;
+        public static GAME3_2: number = 6;
+        public static GAME3_3: number = 7;
+        public static GAME3_4: number = 8;
+        public static ENDING1: number = 9;
+        public static ENDING2: number = 10;
+        public static ENDING3: number = 11;
+        public static ENDING4: number = 12;
+        public static GAMEOVER: number = 13;
     }
 
     export class Screen {
