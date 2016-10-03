@@ -2,9 +2,9 @@
  * @file game.ts
  * @author Kevin Ma kma45@my.centennialcollege.ca
  * @studentID 300867968
- * @date: October 2, 2016
+ * @date: October 3, 2016
  * @description: Abstraction of game scene wherein specific game scenes will follow template laid out by this class
- * @version 0.4.0 - finished template for the game scenes
+ * @version 0.4.1
  */
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -19,7 +19,7 @@ var scenes;
         // CONSTRUCTOR +++++++++++++++++++++++++++++++++++++++++++++++++++++++
         function Game(title, text, option1, option2) {
             _super.call(this);
-            this._gameTitleLabel = new objects.Label(title, "60px Consolas", "#00008b", config.Screen.CENTER_X - 80, config.Screen.CENTER_Y - 150);
+            this._gameTitleLabel = new objects.Label(title, "60px Times New Roman", "#00008b", config.Screen.CENTER_X - 80, config.Screen.CENTER_Y - 150);
             this._gameTextLabel = new objects.Label(text, "30px Consolas", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y);
             this._gamePromptLabel = new objects.Label("What do you do?", "30px Consolas", "#00008b", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 100);
             this._hr = new objects.HorizontalLine(20, config.Screen.CENTER_Y + 125);

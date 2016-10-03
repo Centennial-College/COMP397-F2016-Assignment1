@@ -18,8 +18,8 @@ var scene;
 // Preload Assets required
 var assetData = [
     { id: "Start", src: "../../Assets/images/Start.png" },
-    { id: "Back", src: "../../Assets/images/Back.png" },
-    { id: "Next", src: "../../Assets/images/Next.png" },
+    { id: "Menu", src: "../../Assets/images/Menu.png" },
+    { id: "Begin", src: "../../Assets/images/Begin.png" },
     { id: "Stay", src: "../../Assets/images/Stay.png" },
     { id: "GoOver", src: "../../Assets/images/GoOver.png" },
     { id: "BG", src: "../../Assets/images/bg.png" },
