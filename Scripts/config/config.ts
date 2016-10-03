@@ -12,7 +12,18 @@
 module config {
     export class Scene {
         public static MENU: number = 0;
-        public static GAME: number = 1;
+        public static INSTRUCTIONS: number = 1;
+        public static GAME1: number = 1;
+        public static GAME2_1: number = 1;
+        public static GAME2_2: number = 1;
+        public static GAME3_1: number = 1;
+        public static GAME3_2: number = 1;
+        public static GAME3_3: number = 1;
+        public static GAME3_4: number = 1;
+        public static ENDING1: number = 1;
+        public static ENDING2: number = 1;
+        public static ENDING3: number = 1;
+        public static ENDING4: number = 1;
         public static GAMEOVER: number = 2;
     }
 

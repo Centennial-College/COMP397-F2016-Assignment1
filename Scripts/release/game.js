@@ -18,7 +18,18 @@ var config;
         function Scene() {
         }
         Scene.MENU = 0;
-        Scene.GAME = 1;
+        Scene.INSTRUCTIONS = 1;
+        Scene.GAME1 = 1;
+        Scene.GAME2_1 = 1;
+        Scene.GAME2_2 = 1;
+        Scene.GAME3_1 = 1;
+        Scene.GAME3_2 = 1;
+        Scene.GAME3_3 = 1;
+        Scene.GAME3_4 = 1;
+        Scene.ENDING1 = 1;
+        Scene.ENDING2 = 1;
+        Scene.ENDING3 = 1;
+        Scene.ENDING4 = 1;
         Scene.GAMEOVER = 2;
         return Scene;
     }());
@@ -205,7 +216,7 @@ var objects;
  * @file menu.ts
  * @author Kevin Ma kma45@my.centennialcollege.ca
  * @studentID 300867968
- * @date: September 20, 2016
+ * @date: October 2, 2016
  * @description: This file contains all assets and functionality associated with the menu itself.
  * @version 0.1.0
  */
@@ -230,8 +241,8 @@ var scenes;
           */
         Menu.prototype.start = function () {
             console.log("Menu Scene Started");
-            this._menuLabel = new objects.Label("Welcome to Menu Scene", "40px Arial", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y);
-            this.addChild(this._menuLabel);
+            this._menuTitleLabel = new objects.Label("Game of Survival", "80px Times New Roman", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y);
+            this.addChild(this._menuTitleLabel);
             // Add button to scene. Register for click callback function
             this._menuButton = new objects.Button("Start", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);
             this.addChild(this._menuButton);

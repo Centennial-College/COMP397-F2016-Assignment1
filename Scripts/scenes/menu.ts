@@ -2,7 +2,7 @@
  * @file menu.ts
  * @author Kevin Ma kma45@my.centennialcollege.ca
  * @studentID 300867968
- * @date: September 20, 2016
+ * @date: October 2, 2016
  * @description: This file contains all assets and functionality associated with the menu itself.
  * @version 0.1.0
  */
@@ -15,7 +15,8 @@ module scenes {
         // PRIVATE INSTANCE VARIABLES +++++++++++++++++++++++++++++++++++++++++
         private _menuButton: objects.Button;
         private _menuButtonGameOver: objects.Button;
-        private _menuLabel: objects.Label;
+        private _menuTitleLabel: objects.Label;
+        private _menuAuthorLabel: objects.Label;
 
         // CONSTRUCTOR +++++++++++++++++++++++++++++++++++++++++++++++++++++++
         constructor() {
@@ -35,8 +36,8 @@ module scenes {
         public start(): void {
             console.log("Menu Scene Started");
 
-            this._menuLabel = new objects.Label("Welcome to Menu Scene", "40px Arial", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y);
-            this.addChild(this._menuLabel);
+            this._menuTitleLabel = new objects.Label("Game of Survival", "80px Times New Roman", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y);
+            this.addChild(this._menuTitleLabel);
 
             // Add button to scene. Register for click callback function
             this._menuButton = new objects.Button("Start", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);
