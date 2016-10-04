@@ -1,15 +1,15 @@
 /**
- * @file gNegotiateame32.ts
- * @Negotiateauthor Kevin Ma kma45@my.centennialcollege.ca
+ * @file game32.ts
+ * @author Kevin Ma kma45@my.centennialcollege.ca
  * @studentID 300867968
  * @date: October 3, 2016
- * @description: Game scene for the second decision level.
+ * @description: Game scene for the third decision level.
  * @version 0.5.5 - implemented game 3-2
  */
 module scenes {
     /**
      * Game32 will be a scene at the second decision level that extends the scenes.Game class.
-     * It follows from taking the left option in the game2-1 node scene.
+     * It follows from taking the right option in the game2-1 node scene.
      * 
      * @export
      * @class Game32

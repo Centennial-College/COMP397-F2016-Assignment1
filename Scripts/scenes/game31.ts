@@ -3,7 +3,7 @@
  * @author Kevin Ma kma45@my.centennialcollege.ca
  * @studentID 300867968
  * @date: October 3, 2016
- * @description: Game scene for the second decision level.
+ * @description: Game scene for the third decision level.
  * @version 0.5.4 - implemented game 3-1
  */
 module scenes {

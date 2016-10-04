@@ -4,7 +4,7 @@
  * @studentID 300867968
  * @date: October 3, 2016
  * @description: This file is the entry point for the game.
- * @version 0.5.3
+ * @version 0.6.0 - finished implementing all game scenes
  */
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /// <reference path = "_reference.ts" />
@@ -126,6 +126,16 @@ function changeScene() {
             stage.removeAllChildren();
             currentScene = new scenes.Game32();
             console.log("Starting GAME3-2 scene");
+            break;
+        case config.Scene.GAME3_3:
+            stage.removeAllChildren();
+            currentScene = new scenes.Game33();
+            console.log("Starting GAME3-3 scene");
+            break;
+        case config.Scene.GAME3_4:
+            stage.removeAllChildren();
+            currentScene = new scenes.Game34();
+            console.log("Starting GAME3-4 scene");
             break;
         case config.Scene.GAMEOVER:
             stage.removeAllChildren();
