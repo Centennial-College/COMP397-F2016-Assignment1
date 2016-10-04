@@ -20,4 +20,5 @@
 /// <reference path="../scenes/game34.ts" />
 /// <reference path="../scenes/ending.ts" />
 /// <reference path="../scenes/ending1.ts" />
+/// <reference path="../scenes/ending2.ts" />
 /// <reference path="../scenes/gameover.ts" />

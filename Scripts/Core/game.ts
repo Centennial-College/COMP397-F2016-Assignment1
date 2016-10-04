@@ -163,6 +163,12 @@ function changeScene(): void {
             console.log("Starting ENDING1 scene");
             endingText = "A demon suddenly leaps from within the\nsheath and devours your body!";
             break;
+        case config.Scene.ENDING2:
+            stage.removeAllChildren();
+            currentScene = new scenes.Ending2();
+            console.log("Starting ENDING2 scene");
+            endingText = "You were too late. With no portal left, you\nwatch in despair as the nuclear missles\nrain down from above.";
+            break;
 
         // ENDING NODES
         case config.Scene.GAMEOVER:
