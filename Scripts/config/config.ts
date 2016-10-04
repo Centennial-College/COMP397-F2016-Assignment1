@@ -29,6 +29,7 @@ module config {
         public static ENDING7: number = 15;
         public static ENDING8: number = 16;
         public static GAMEOVER: number = 17;
+        public static GAMEWIN: number = 18;
     }
 
     export class Screen {

@@ -19,6 +19,7 @@ let stage: createjs.Stage;
 // Game Scene Variables
 let currentScene: objects.Scene;
 let scene: number;
+let endingText: string;
 
 // Preload Assets required
 let assetData: objects.Asset[] = [
@@ -114,12 +115,14 @@ function changeScene(): void {
             currentScene = new scenes.Instructions();
             console.log("Starting INSTRUCTIONS scene");
             break;
+
         // FIRST DECISION LEVEL NODES
         case config.Scene.GAME1:
             stage.removeAllChildren();
             currentScene = new scenes.Game1();
             console.log("Starting GAME1 scene");
             break;
+
         // SECOND DECISION LEVEL NODES
         case config.Scene.GAME2_1:
             stage.removeAllChildren();
@@ -131,6 +134,7 @@ function changeScene(): void {
             currentScene = new scenes.Game22();
             console.log("Starting GAME2-2 scene");
             break;
+
         // THIRD DECISION LEVEL NODES
         case config.Scene.GAME3_1:
             stage.removeAllChildren();
@@ -152,6 +156,11 @@ function changeScene(): void {
             currentScene = new scenes.Game34();
             console.log("Starting GAME3-4 scene");
             break;
+
+        // RESULTS DECISION LEVEL NODES
+        
+
+        // ENDING NODES
         case config.Scene.GAMEOVER:
             stage.removeAllChildren();
             currentScene = new scenes.GameOver();

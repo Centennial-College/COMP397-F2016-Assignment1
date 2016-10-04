@@ -15,6 +15,7 @@ var stage;
 // Game Scene Variables
 var currentScene;
 var scene;
+var endingText;
 // Preload Assets required
 var assetData = [
     { id: "Start", src: "../../Assets/images/Start.png" },
@@ -137,6 +138,8 @@ function changeScene() {
             currentScene = new scenes.Game34();
             console.log("Starting GAME3-4 scene");
             break;
+        // RESULTS DECISION LEVEL NODES
+        // ENDING NODES
         case config.Scene.GAMEOVER:
             stage.removeAllChildren();
             currentScene = new scenes.GameOver();

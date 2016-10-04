@@ -30,6 +30,7 @@ var config;
         Scene.ENDING7 = 15;
         Scene.ENDING8 = 16;
         Scene.GAMEOVER = 17;
+        Scene.GAMEWIN = 18;
         return Scene;
     }());
     config.Scene = Scene;
