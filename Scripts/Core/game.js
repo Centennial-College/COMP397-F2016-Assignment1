@@ -21,6 +21,8 @@ var assetData = [
     { id: "Menu", src: "../../Assets/images/Menu.png" },
     { id: "Begin", src: "../../Assets/images/Begin.png" },
     { id: "TakeIt", src: "../../Assets/images/TakeIt.png" },
+    { id: "Engage", src: "../../Assets/images/Engage.png" },
+    { id: "Negotiate", src: "../../Assets/images/Negotiate.png" },
     { id: "LookInside", src: "../../Assets/images/LookInside.png" },
     { id: "Stay", src: "../../Assets/images/Stay.png" },
     { id: "GoOver", src: "../../Assets/images/GoOver.png" },
@@ -97,11 +99,13 @@ function changeScene() {
             currentScene = new scenes.Instructions();
             console.log("Starting INSTRUCTIONS scene");
             break;
+        // FIRST DECISION LEVEL NODES
         case config.Scene.GAME1:
             stage.removeAllChildren();
             currentScene = new scenes.Game1();
             console.log("Starting GAME1 scene");
             break;
+        // SECOND DECISION LEVEL NODES
         case config.Scene.GAME2_1:
             stage.removeAllChildren();
             currentScene = new scenes.Game21();
@@ -112,10 +116,16 @@ function changeScene() {
             currentScene = new scenes.Game22();
             console.log("Starting GAME2-2 scene");
             break;
+        // THIRD DECISION LEVEL NODES
         case config.Scene.GAME3_1:
             stage.removeAllChildren();
             currentScene = new scenes.Game31();
             console.log("Starting GAME3-1 scene");
+            break;
+        case config.Scene.GAME3_2:
+            stage.removeAllChildren();
+            currentScene = new scenes.Game32();
+            console.log("Starting GAME3-2 scene");
             break;
         case config.Scene.GAMEOVER:
             stage.removeAllChildren();
