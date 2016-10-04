@@ -2,9 +2,9 @@
  * @file gameover.ts
  * @author Kevin Ma kma45@my.centennialcollege.ca
  * @studentID 300867968
- * @date: September 20, 2016
+ * @date: October 3, 2016
  * @description: This file is the gameover scene for the game.
- * @version 0.1.0
+ * @version 0.6.3 - implemented GameOver1
  */
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -13,12 +13,15 @@ module scenes {
     export class GameOver extends objects.Scene {
 
         // PRIVATE INSTANCE VARIABLES +++++++++++++++++++++++++++++++++++++++++
-        private _bg: createjs.Bitmap;
-        private _marioButton: objects.Button;
+        private _playAgainButton: objects.Button;
+        private _gameOverTitleLabel: objects.Label
+        private _gameOverTextLabel: objects.Label
+        private _hr: objects.HorizontalLine;
 
         // CONSTRUCTOR +++++++++++++++++++++++++++++++++++++++++++++++++++++++
         constructor() {
             super();
+            this.start();
         }
 
         // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -32,12 +35,16 @@ module scenes {
          * @return {void}
          */
         public start(): void {
-            this._bg = new createjs.Bitmap(assets.getResult("BG"));
-            this.addChild(this._bg);
+            this._gameOverTitleLabel = new objects.Label("Game Over", "60px Times New Roman", "#00008b", config.Screen.CENTER_X - 80, config.Screen.CENTER_Y - 150);
+            this._gameOverTextLabel = new objects.Label(endingText, "30px Consolas", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y);
+            this._playAgainButton = new objects.Button("PlayAgain", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);
+            this._hr = new objects.HorizontalLine(20, config.Screen.CENTER_Y + 125);
 
-            this._marioButton = new objects.Button("Mario", config.Screen.CENTER_X, config.Screen.CENTER_Y);
-            this.addChild(this._marioButton);
-            this._marioButton.on('click', this._marioClick, this);
+            this.addChild(this._gameOverTitleLabel);
+            this.addChild(this._gameOverTextLabel);
+            this.addChild(this._playAgainButton);
+            this.addChild(this._hr);
+            this._playAgainButton.on('click', this._playAgainButtonClick, this);
 
             stage.addChild(this);
         }
@@ -65,7 +72,7 @@ module scenes {
          * @memberOf GameOver
          * @return {void}
          */
-        private _marioClick(event: createjs.MouseEvent): void {
+        private _playAgainButtonClick(event: createjs.MouseEvent): void {
             scene = config.Scene.MENU;
             changeScene();
         }

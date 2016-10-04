@@ -4,7 +4,7 @@
  * @studentID 300867968
  * @date: October 3, 2016
  * @description: Ending scene for the results level.
- * @version 0.6.2 - implemented Ending1 
+ * @version 0.6.3 - implemented GameOver1 
  */
 module scenes {
     /**

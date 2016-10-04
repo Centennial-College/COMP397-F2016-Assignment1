@@ -24,13 +24,12 @@ var assetData = [
     { id: "TakeIt", src: "../../Assets/images/TakeIt.png" },
     { id: "Engage", src: "../../Assets/images/Engage.png" },
     { id: "Negotiate", src: "../../Assets/images/Negotiate.png" },
+    { id: "Next", src: "../../Assets/images/Next.png" },
+    { id: "PlayAgain", src: "../../Assets/images/PlayAgain.png" },
     { id: "LookInside", src: "../../Assets/images/LookInside.png" },
     { id: "Stay", src: "../../Assets/images/Stay.png" },
     { id: "GoOver", src: "../../Assets/images/GoOver.png" },
     { id: "Leave", src: "../../Assets/images/Leave.png" },
-    { id: "BG", src: "../../Assets/images/bg.png" },
-    { id: "GameOver", src: "../../Assets/images/gameover.png" },
-    { id: "Mario", src: "../../Assets/images/mario.png" }
 ];
 /**
  * This method is used to preload all the assets required for the game
@@ -139,6 +138,12 @@ function changeScene() {
             console.log("Starting GAME3-4 scene");
             break;
         // RESULTS DECISION LEVEL NODES
+        case config.Scene.ENDING1:
+            stage.removeAllChildren();
+            currentScene = new scenes.Ending1();
+            console.log("Starting ENDING1 scene");
+            endingText = "A demon suddenly leaps from within the\nsheath and devours your body!";
+            break;
         // ENDING NODES
         case config.Scene.GAMEOVER:
             stage.removeAllChildren();

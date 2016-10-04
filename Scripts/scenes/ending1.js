@@ -9,7 +9,7 @@ var __extends = (this && this.__extends) || function (d, b) {
  * @studentID 300867968
  * @date: October 3, 2016
  * @description: Ending scene for the results level.
- * @version 0.6.2 - implemented Ending1
+ * @version 0.6.3 - implemented GameOver1
  */
 var scenes;
 (function (scenes) {
