@@ -4,7 +4,7 @@
  * @studentID 300867968
  * @date: October 2, 2016
  * @description: This file is used to store globally accessible values and states for the game.
- * @version 0.2.0 - finished menu scene
+ * @version 0.5.4 - implemented game 3-1
  */
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -24,7 +24,11 @@ module config {
         public static ENDING2: number = 10;
         public static ENDING3: number = 11;
         public static ENDING4: number = 12;
-        public static GAMEOVER: number = 13;
+        public static ENDING5: number = 13;
+        public static ENDING6: number = 14;
+        public static ENDING7: number = 15;
+        public static ENDING8: number = 16;
+        public static GAMEOVER: number = 17;
     }
 
     export class Screen {

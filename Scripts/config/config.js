@@ -4,7 +4,7 @@
  * @studentID 300867968
  * @date: October 2, 2016
  * @description: This file is used to store globally accessible values and states for the game.
- * @version 0.2.0 - finished menu scene
+ * @version 0.5.4 - implemented game 3-1
  */
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 var config;
@@ -25,7 +25,11 @@ var config;
         Scene.ENDING2 = 10;
         Scene.ENDING3 = 11;
         Scene.ENDING4 = 12;
-        Scene.GAMEOVER = 13;
+        Scene.ENDING5 = 13;
+        Scene.ENDING6 = 14;
+        Scene.ENDING7 = 15;
+        Scene.ENDING8 = 16;
+        Scene.GAMEOVER = 17;
         return Scene;
     }());
     config.Scene = Scene;

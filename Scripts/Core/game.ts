@@ -26,6 +26,7 @@ let assetData: objects.Asset[] = [
     { id: "Menu", src: "../../Assets/images/Menu.png" },
     { id: "Begin", src: "../../Assets/images/Begin.png" },
     { id: "TakeIt", src: "../../Assets/images/TakeIt.png" },
+    { id: "LookInside", src: "../../Assets/images/LookInside.png" },
     { id: "Stay", src: "../../Assets/images/Stay.png" },
     { id: "GoOver", src: "../../Assets/images/GoOver.png" },
     { id: "Leave", src: "../../Assets/images/Leave.png" },
@@ -125,6 +126,11 @@ function changeScene(): void {
             stage.removeAllChildren();
             currentScene = new scenes.Game22();
             console.log("Starting GAME2-2 scene");
+            break;
+        case config.Scene.GAME3_1:
+            stage.removeAllChildren();
+            currentScene = new scenes.Game31();
+            console.log("Starting GAME3-1 scene");
             break;
         case config.Scene.GAMEOVER:
             stage.removeAllChildren();
