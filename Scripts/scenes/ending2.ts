@@ -18,7 +18,7 @@ module scenes {
      */
     export class Ending2 extends scenes.Ending {
         /**
-         * Creates an instance of Ending1.
+         * Creates an instance of Ending2.
          * 
          * 
          * @memberOf Ending2

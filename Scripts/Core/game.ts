@@ -169,6 +169,12 @@ function changeScene(): void {
             console.log("Starting ENDING2 scene");
             endingText = "You were too late. With no portal left, you\nwatch in despair as the nuclear missles\nrain down from above.";
             break;
+        case config.Scene.ENDING3:
+            stage.removeAllChildren();
+            currentScene = new scenes.Ending3();
+            console.log("Starting ENDING3 scene");
+            endingText = "As the fight dragged out, the time\nremaining disappeared. The both of you\nwatch in despair as nuclear missles rain\ndown from above.";
+            break;
 
         // ENDING NODES
         case config.Scene.GAMEOVER:

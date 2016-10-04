@@ -25,7 +25,7 @@ var scenes;
     var Ending2 = (function (_super) {
         __extends(Ending2, _super);
         /**
-         * Creates an instance of Ending1.
+         * Creates an instance of Ending2.
          *
          *
          * @memberOf Ending2
