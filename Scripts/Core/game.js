@@ -167,6 +167,12 @@ function changeScene() {
             currentScene = new scenes.Ending5();
             console.log("Starting ENDING5 scene");
             break;
+        case config.Scene.ENDING6:
+            stage.removeAllChildren();
+            currentScene = new scenes.Ending6();
+            console.log("Starting ENDING6 scene");
+            endingText = "The two of you bounce ideas back and\nforth in an attempt to find a suitable\nsolution. Unfortunately, there was not\nenough time. Nuclear missles started\nplummeting down from above.";
+            break;
         // ENDING NODES
         case config.Scene.GAMEOVER:
             stage.removeAllChildren();
