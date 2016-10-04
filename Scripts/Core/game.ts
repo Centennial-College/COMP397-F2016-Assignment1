@@ -175,6 +175,12 @@ function changeScene(): void {
             console.log("Starting ENDING3 scene");
             endingText = "As the fight dragged out, the time\nremaining disappeared. The both of you\nwatch in despair as nuclear missles rain\ndown from above.";
             break;
+        case config.Scene.ENDING4:
+            stage.removeAllChildren();
+            currentScene = new scenes.Ending4();
+            console.log("Starting ENDING4 scene");
+            endingText = "While you were deep in thought, the other\nperson took a knife and stabbed you in\nthe back. The knife plunged through your heart\nalmost instantly.";
+            break;
 
         // ENDING NODES
         case config.Scene.GAMEOVER:

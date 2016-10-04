@@ -46,6 +46,9 @@ module scenes {
             this.addChild(this._hr);
             this._playAgainButton.on('click', this._playAgainButtonClick, this);
 
+            // red bg because you died.
+            stage.canvas.style.backgroundColor = "#f00";
+
             stage.addChild(this);
         }
 

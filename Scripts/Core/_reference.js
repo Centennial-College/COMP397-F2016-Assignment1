@@ -19,5 +19,6 @@
 /// <reference path="../scenes/ending1.ts" />
 /// <reference path="../scenes/ending2.ts" />
 /// <reference path="../scenes/ending3.ts" />
+/// <reference path="../scenes/ending4.ts" />
 /// <reference path="../scenes/gameover.ts" /> 
 //# sourceMappingURL=_reference.js.map

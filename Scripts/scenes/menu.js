@@ -33,6 +33,8 @@ var scenes;
           */
         Menu.prototype.start = function () {
             console.log("Menu Scene Started");
+            // reset to normal color
+            stage.canvas.style.backgroundColor = "aliceblue";
             // add title to menu scene
             this._menuTitleLabel = new objects.Label("Game of\nSurvival", "123px Times New Roman", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y - 70);
             this.addChild(this._menuTitleLabel);
