@@ -31,7 +31,7 @@ var scenes;
          * @memberOf Ending6
          */
         function Ending6() {
-            _super.call(this, "The Plea", "The other person gets on his/her knees\nand prostrates before you. \"I will do\nanything you request of me! Please don't\nkill me o' mighty one!\"", true);
+            _super.call(this, "The Imploration", "The other person gets on his/her knees\nand prostrates before you. \"I will do\nanything you request of me! Please don't\nkill me o' mighty one!\"", true);
         }
         return Ending6;
     }(scenes.Ending));

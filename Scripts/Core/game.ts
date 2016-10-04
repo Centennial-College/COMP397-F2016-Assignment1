@@ -2,9 +2,9 @@
  * @file game.ts
  * @author Kevin Ma kma45@my.centennialcollege.ca
  * @studentID 300867968
- * @date: October 3, 2016
+ * @date: October 4, 2016
  * @description: This file is the entry point for the game.
- * @version 0.6.0 - finished implementing all game scenes
+ * @version 1.0.0 - initial release; all paths are functional
  */
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -200,9 +200,9 @@ function changeScene(): void {
             break;
         case config.Scene.ENDING8:
             stage.removeAllChildren();
-            currentScene = new scenes.Ending6();
+            currentScene = new scenes.Ending8();
             console.log("Starting ENDING8 scene");
-            endingText = "The two of you bounce ideas back and\nforth in an attempt to find a suitable\nsolution. Unfortunately, there was not\nenough time. Nuclear missles started\nplummeting down from above.";
+            endingText = "While you are still talking you hear a\nsnicker, before you feel a quick but sharp\npain at the back of your neck.The next\nthing you know, your head rolls across the\nfloor, and you see blood spewing from what\nlooks like your body...";
             break;
 
         // ENDING NODES

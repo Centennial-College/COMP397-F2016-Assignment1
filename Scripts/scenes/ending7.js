@@ -15,8 +15,8 @@ var scenes;
 (function (scenes) {
     /**
      * Ending7 will be a scene at the lowest level in the state machine design pattern
-     * that extends the scenes.Game class. It follows from taking the right option in the
-     * game3-3 node scene.
+     * that extends the scenes.Game class. It follows from taking the left option in the
+     * game3-4 node scene.
      *
      * @export
      * @class Ending7

@@ -24,7 +24,7 @@ module scenes {
          * @memberOf Ending6
          */
         constructor() {
-            super("The Plea", "The other person gets on his/her knees\nand prostrates before you. \"I will do\nanything you request of me! Please don't\nkill me o' mighty one!\"", true);
+            super("The Imploration", "The other person gets on his/her knees\nand prostrates before you. \"I will do\nanything you request of me! Please don't\nkill me o' mighty one!\"", true);
         }
     }
 }
