@@ -2,9 +2,9 @@
  * @file game.ts
  * @author Kevin Ma kma45@my.centennialcollege.ca
  * @studentID 300867968
- * @date: October 2, 2016
+ * @date: October 3, 2016
  * @description: This file is the entry point for the game.
- * @version 0.2.2
+ * @version 0.5.3
  */
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /// <reference path = "_reference.ts" />
@@ -20,6 +20,7 @@ var assetData = [
     { id: "Start", src: "../../Assets/images/Start.png" },
     { id: "Menu", src: "../../Assets/images/Menu.png" },
     { id: "Begin", src: "../../Assets/images/Begin.png" },
+    { id: "TakeIt", src: "../../Assets/images/TakeIt.png" },
     { id: "Stay", src: "../../Assets/images/Stay.png" },
     { id: "GoOver", src: "../../Assets/images/GoOver.png" },
     { id: "Leave", src: "../../Assets/images/Leave.png" },
@@ -104,6 +105,11 @@ function changeScene() {
             stage.removeAllChildren();
             currentScene = new scenes.Game21();
             console.log("Starting GAME2-1 scene");
+            break;
+        case config.Scene.GAME2_2:
+            stage.removeAllChildren();
+            currentScene = new scenes.Game22();
+            console.log("Starting GAME2-2 scene");
             break;
         case config.Scene.GAMEOVER:
             stage.removeAllChildren();

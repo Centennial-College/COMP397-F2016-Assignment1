@@ -12,7 +12,7 @@ module scenes {
      * It follows from taking the left option in the first decision node game scene.
      * 
      * @export
-     * @class Game1
+     * @class Game21
      * @extends {scenes.Game}
      */
     export class Game21 extends scenes.Game {

@@ -13,4 +13,5 @@
 /// <reference path="../scenes/game.ts" />
 /// <reference path="../scenes/game1.ts" />
 /// <reference path="../scenes/game21.ts" />
+/// <reference path="../scenes/game22.ts" />
 /// <reference path="../scenes/gameover.ts" />
