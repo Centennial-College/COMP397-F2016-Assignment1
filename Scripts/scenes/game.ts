@@ -4,7 +4,7 @@
  * @studentID 300867968
  * @date: October 3, 2016
  * @description: Abstraction of game scene wherein specific game scenes will follow template laid out by this class
- * @version 0.4.1
+ * @version 0.5.2 - revised game.ts scenes
  */
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -19,9 +19,23 @@ module scenes {
         private _option1Button: objects.Button;
         private _option2Button: objects.Button;
         private _hr: objects.HorizontalLine;
+        private _option1Scene: number;
+        private _option2Scene: number;
 
         // CONSTRUCTOR +++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        constructor(title: string, text: string, option1: string, option2: string) {
+        /**
+         * Creates an instance of Game.
+         * 
+         * @param {string} title
+         * @param {string} text
+         * @param {string} option1
+         * @param {string} option2
+         * @param {number} opt1Scene
+         * @param {number} opt2Scene
+         * 
+         * @memberOf Game
+         */
+        constructor(title: string, text: string, option1: string, option2: string, opt1Scene: number, opt2Scene: number) {
             super();
             this._gameTitleLabel = new objects.Label(title, "60px Times New Roman", "#00008b", config.Screen.CENTER_X - 80, config.Screen.CENTER_Y - 150);
             this._gameTextLabel = new objects.Label(text, "30px Consolas", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y);
@@ -29,6 +43,8 @@ module scenes {
             this._hr = new objects.HorizontalLine(20, config.Screen.CENTER_Y + 125);
             this._option1Button = new objects.Button(option1, config.Screen.CENTER_X - 200, config.Screen.CENTER_Y + 180);
             this._option2Button = new objects.Button(option2, config.Screen.CENTER_X + 200, config.Screen.CENTER_Y + 180);
+            this._option1Scene = opt1Scene;
+            this._option2Scene = opt2Scene;
             this.start();
         }
 
@@ -87,7 +103,7 @@ module scenes {
          * @memberOf Game
          */
         private _option1ButtonClick(event: createjs.MouseEvent) {
-            scene = config.Scene.MENU;
+            scene = this._option1Scene;
             changeScene();
         }
 
@@ -101,7 +117,7 @@ module scenes {
          * @memberOf Game
          */
         private _option2ButtonClick(event: createjs.MouseEvent) {
-            scene = config.Scene.INSTRUCTIONS;
+            scene = this._option2Scene;
             changeScene();
         }
     }

@@ -9,7 +9,7 @@ var __extends = (this && this.__extends) || function (d, b) {
  * @studentID 300867968
  * @date: October 3, 2016
  * @description: Game scene for the first decision level.
- * @version 0.5.0 - implemented first decision level of the game
+ * @version 0.5.2 - revised game.ts scenes
  */
 var scenes;
 (function (scenes) {
@@ -29,7 +29,7 @@ var scenes;
          * @memberOf Game1
          */
         function Game1() {
-            _super.call(this, "Forest of Origins", "It is too dark to see around you. However,\nyou notice there is some light up ahead\naround the corner.", "Stay", "GoOver");
+            _super.call(this, "Forest of Origins", "It is too dark to see around you. However,\nyou notice there is some light up ahead\naround the corner.", "Stay", "GoOver", config.Scene.GAME2_1, config.Scene.GAME2_2);
         }
         return Game1;
     }(scenes.Game));

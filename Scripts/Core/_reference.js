@@ -9,5 +9,6 @@
 /// <reference path="../scenes/instructions.ts" />
 /// <reference path="../scenes/game.ts" />
 /// <reference path="../scenes/game1.ts" />
+/// <reference path="../scenes/game21.ts" />
 /// <reference path="../scenes/gameover.ts" /> 
 //# sourceMappingURL=_reference.js.map

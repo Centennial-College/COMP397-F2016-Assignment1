@@ -4,7 +4,7 @@
  * @studentID 300867968
  * @date: October 3, 2016
  * @description: Abstraction of game scene wherein specific game scenes will follow template laid out by this class
- * @version 0.4.1
+ * @version 0.5.2 - revised game.ts scenes
  */
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -17,7 +17,19 @@ var scenes;
     var Game = (function (_super) {
         __extends(Game, _super);
         // CONSTRUCTOR +++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        function Game(title, text, option1, option2) {
+        /**
+         * Creates an instance of Game.
+         *
+         * @param {string} title
+         * @param {string} text
+         * @param {string} option1
+         * @param {string} option2
+         * @param {number} opt1Scene
+         * @param {number} opt2Scene
+         *
+         * @memberOf Game
+         */
+        function Game(title, text, option1, option2, opt1Scene, opt2Scene) {
             _super.call(this);
             this._gameTitleLabel = new objects.Label(title, "60px Times New Roman", "#00008b", config.Screen.CENTER_X - 80, config.Screen.CENTER_Y - 150);
             this._gameTextLabel = new objects.Label(text, "30px Consolas", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y);
@@ -25,6 +37,8 @@ var scenes;
             this._hr = new objects.HorizontalLine(20, config.Screen.CENTER_Y + 125);
             this._option1Button = new objects.Button(option1, config.Screen.CENTER_X - 200, config.Screen.CENTER_Y + 180);
             this._option2Button = new objects.Button(option2, config.Screen.CENTER_X + 200, config.Screen.CENTER_Y + 180);
+            this._option1Scene = opt1Scene;
+            this._option2Scene = opt2Scene;
             this.start();
         }
         // PUBLIC FUNCTIONS +++++++++++++++++++++++++++++++++++++++++++++++++
@@ -75,7 +89,7 @@ var scenes;
          * @memberOf Game
          */
         Game.prototype._option1ButtonClick = function (event) {
-            scene = config.Scene.MENU;
+            scene = this._option1Scene;
             changeScene();
         };
         /**
@@ -88,7 +102,7 @@ var scenes;
          * @memberOf Game
          */
         Game.prototype._option2ButtonClick = function (event) {
-            scene = config.Scene.INSTRUCTIONS;
+            scene = this._option2Scene;
             changeScene();
         };
         return Game;
