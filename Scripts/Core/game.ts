@@ -181,12 +181,22 @@ function changeScene(): void {
             console.log("Starting ENDING4 scene");
             endingText = "While you were deep in thought, the other\nperson took a knife and stabbed you in\nthe back. The knife plunged through your heart\nalmost instantly.";
             break;
+        case config.Scene.ENDING5:
+            stage.removeAllChildren();
+            currentScene = new scenes.Ending5();
+            console.log("Starting ENDING5 scene");
+            break;
 
         // ENDING NODES
         case config.Scene.GAMEOVER:
             stage.removeAllChildren();
             currentScene = new scenes.GameOver();
             console.log("Starting GAMEOVER scene");
+            break;
+        case config.Scene.GAMEWIN:
+            stage.removeAllChildren();
+            currentScene = new scenes.GameWin();
+            console.log("Starting GAMEWIN scene");
             break;
     }
 
