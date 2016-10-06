@@ -33,7 +33,7 @@ module scenes {
         constructor(title: string, text: string, gameOver: boolean) {
             super();
             this._endingTitleLabel = new objects.Label(title, "60px Times New Roman", "#00008b", config.Screen.CENTER_X - 80, config.Screen.CENTER_Y - 150);
-            this._endingTextLabel = new objects.Label(text, "30px Consolas", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y);
+            this._endingTextLabel = new objects.Label(text, "25px Verdana", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y);
             this._endingPromptLabel = new objects.Label("Find out your fate...", "30px Consolas", "#00008b", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 100);
             this._hr = new objects.HorizontalLine(20, config.Screen.CENTER_Y + 125);
             this._nextButton = new objects.Button("Next", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);

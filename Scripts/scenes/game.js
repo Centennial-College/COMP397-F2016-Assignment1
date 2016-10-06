@@ -32,7 +32,7 @@ var scenes;
         function Game(title, text, option1, option2, opt1Scene, opt2Scene) {
             _super.call(this);
             this._gameTitleLabel = new objects.Label(title, "60px Times New Roman", "#00008b", config.Screen.CENTER_X - 80, config.Screen.CENTER_Y - 150);
-            this._gameTextLabel = new objects.Label(text, "30px Consolas", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y);
+            this._gameTextLabel = new objects.Label(text, "25px Verdana", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y);
             this._gamePromptLabel = new objects.Label("What do you do?", "30px Consolas", "#00008b", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 100);
             this._hr = new objects.HorizontalLine(20, config.Screen.CENTER_Y + 125);
             this._option1Button = new objects.Button(option1, config.Screen.CENTER_X - 200, config.Screen.CENTER_Y + 180);
