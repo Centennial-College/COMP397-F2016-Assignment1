@@ -4,7 +4,7 @@
  * @studentID 300867968
  * @date: October 3, 2016
  * @description: This file is the gameover scene for the game.
- * @version 0.6.3 - implemented GameOver1
+ * @version 1.0.2 - fixed font family and size for game.ts, gameover.ts, and ending.ts
  */
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -36,7 +36,7 @@ module scenes {
          */
         public start(): void {
             this._gameOverTitleLabel = new objects.Label("Game Over", "60px Times New Roman", "#00008b", config.Screen.CENTER_X - 80, config.Screen.CENTER_Y - 150);
-            this._gameOverTextLabel = new objects.Label(endingText, "30px Consolas", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y);
+            this._gameOverTextLabel = new objects.Label(endingText, "23px Verdana", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y);
             this._playAgainButton = new objects.Button("PlayAgain", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);
             this._hr = new objects.HorizontalLine(20, config.Screen.CENTER_Y + 125);
 

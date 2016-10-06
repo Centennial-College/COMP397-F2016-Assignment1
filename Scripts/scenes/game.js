@@ -4,7 +4,7 @@
  * @studentID 300867968
  * @date: October 3, 2016
  * @description: Abstraction of game scene wherein specific game scenes will follow template laid out by this class
- * @version 0.5.2 - revised game.ts scenes
+ * @version 1.0.2 - fixed font family and size for game.ts, gameover.ts, and ending.ts
  */
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -32,7 +32,7 @@ var scenes;
         function Game(title, text, option1, option2, opt1Scene, opt2Scene) {
             _super.call(this);
             this._gameTitleLabel = new objects.Label(title, "60px Times New Roman", "#00008b", config.Screen.CENTER_X - 80, config.Screen.CENTER_Y - 150);
-            this._gameTextLabel = new objects.Label(text, "25px Verdana", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y);
+            this._gameTextLabel = new objects.Label(text, "23px Verdana", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y);
             this._gamePromptLabel = new objects.Label("What do you do?", "30px Consolas", "#00008b", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 100);
             this._hr = new objects.HorizontalLine(20, config.Screen.CENTER_Y + 125);
             this._option1Button = new objects.Button(option1, config.Screen.CENTER_X - 200, config.Screen.CENTER_Y + 180);
