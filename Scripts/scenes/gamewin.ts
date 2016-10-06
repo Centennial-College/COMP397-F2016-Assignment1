@@ -4,7 +4,7 @@
  * @studentID 300867968
  * @date: October 3, 2016
  * @description: This file is the gamewin scene for the game.
- * @version 0.6.7 - implemented GameOver5 and GameWin
+ * @version 1.0.3 - fixed font family and size for gamewin.ts
  */
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -43,7 +43,7 @@ module scenes {
          */
         public start(): void {
             this._gameWinTitleLabel = new objects.Label("Congratulations", "60px Times New Roman", "#00008b", config.Screen.CENTER_X - 80, config.Screen.CENTER_Y - 150);
-            this._gameWinTextLabel = new objects.Label("And off comes his/her head! As a fountain\nof blood errupts from the severed body,\nyou make a quick victory dance. You then\nenter the portal and safely make it back\nhome.", "30px Consolas", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y);
+            this._gameWinTextLabel = new objects.Label("And off comes his/her head! As a fountain\nof blood errupts from the severed body,\nyou make a quick victory dance. You then\nenter the portal and safely make it back\nhome.", "23px Verdana", "#00008b", config.Screen.CENTER_X, config.Screen.CENTER_Y);
             this._playAgainButton = new objects.Button("PlayAgain", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);
             this._hr = new objects.HorizontalLine(20, config.Screen.CENTER_Y + 125);
 
